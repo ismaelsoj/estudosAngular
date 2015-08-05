@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="ismaelsoj.eti.br">
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="icone.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="pt-br" />
+  <title>Ismael Júnior</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a href="#/">Home</a></li>
+      <li><a href="#/formacao">Formação</a></li>
+      <li><a href="#/contato">Contato</a></li>
+    </ul>
+  </nav>
+  <hr/>
+  <div id="conteudo" ng-view></div>
+  <div id="rodape" ng-controller="DataController">
+    <hr/>
+    <h4>Data: {{hora | date: 'dd/MM/yyyy HH:mm:ss': -0300}}</h4>
+  </div>
+  <script src="js/vendors/angular.min.js"></script>
+  <script src="js/vendors/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/HomeController.js"></script>
+  <script src="js/controllers/FormacaoController.js"></script>
+  <script src="js/controllers/ContatoController.js"></script>
+  <script src="js/controllers/DataController.js"></script>
+</body>
+</html>
